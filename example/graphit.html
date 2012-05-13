@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <script type="text/javascript" src="js-graph-it.js"></script>
+    <link rel="stylesheet" type="text/css" href="js-graph-it.css">
+<!--
+<link rel="stylesheet" type="text/css" href="sf-homepage.css" />
+-->
+    <style>
+      .canvas {
+        font-family: tahoma;
+      }
+      .block {
+        position: absolute;
+        border: 1px solid #7DAB76;
+        background-color: #BAFFB0;
+        padding: 3px;
+      }
+      .connector {
+        background-color: #FF9900;
+      }
+      .source-label, .middle-label, .destination-label {
+        padding: 5px;
+      }
+    </style>
+<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+<script>
+<!--
+		function onLoad()
+		{
+			resizeCanvas();
+			initPageObjects();
+		}
+		
+		/**
+		 * Resizes the main canvas to the maximum visible height.
+		 */
+		function resizeCanvas()
+		{
+			var divElement = document.getElementById("mainCanvas");
+			var screenHeight = window.innerHeight || document.body.offsetHeight;
+			divElement.style.height = (screenHeight - 16) + "px";
+		}
+	
+-->
+</script>
+  </head>
+  <body onload="onLoad();">
+
+<table class="main_table" style="height: 100%; width: 100%">
+<tr>
+<td width="120" style="vertical-align: top;" class="menu">
+<ul id="menu">
+<li><a href="index.html">overview</a></li>
+<li><a href="story.html">story of this project</a></li>
+<li><a href="gettingstarted.html">getting started</a></li>
+<li><a href="http://sourceforge.net/forum/?group_id=170245">forum</a></li>
+<li><a href="http://sourceforge.net/tracker/?group_id=170245&atid=853532">bugs</a></li>
+<li><a href="http://sourceforge.net/projects/js-graph-it/">download</a></li>
+</ul>
+</td>
+<td style="vertical-align: top; padding: 0px;">
+
+    <div class="canvas" id="mainCanvas" style="width: 100%; height: 500px; border: 1px solid black;">
+<!--
+<div id="mainCanvas" class="canvas" style="width: 100%; height: 500px;">
+<div class="canvas" id="mainCanvas" style="width: 350px; height: 250px; border: 1px solid black;">
+-->
+
+      <h1 class="block draggable btn" id="h1_block"
+        style="left: 10px; top:10px;">
+          h1 block
+      </h1>
+      <h2 class="block draggable btn btn-large btn-info" id="h2_block"
+        style="left: 200px; top: 100px;">
+        h2 block
+      </h2>
+    <div class="connector h1_block h2_block down_start down_end">
+        <img src="arrow.gif" class="connector-start">
+        <img src="arrow.gif" class="connector-end">
+        <label class="source-label">start</label>
+        <label class="middle-label">middle</label>
+        <label class="destination-label">end</label>
+    </div>
+<p id="drag_and_drop_block" class="block draggable btn btn-large btn-inverse" style="left: 580px; top: 340px; width: 350px;">
+					you can drag and drop anything around!<br>
+					(but you already noticed, didn't you?)
+</p>
+
+
+</td>
+</tr>
+</table>
+  </body>
+</html>
+
